@@ -1,7 +1,7 @@
 pipeline {
     agent any
     triggers {
-        pollSCM 'H/* * * * *'
+        pollSCM '* * * * *'
     }
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
