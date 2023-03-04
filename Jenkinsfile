@@ -1,8 +1,9 @@
 pipeline {
     agent any
-    triggers {
-  githubPullRequests events: [close()], spec: '* * * * *', triggerMode: 'CRON'
+   triggers {
+  pollSCM 'H/1 * * * *'
 }
+
 
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
